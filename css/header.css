@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  width: 100%;
+  background-color: #fefefe;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper-header {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 120px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: #2f241f;
+  font-weight: 500;
+}
+
+.menu-desktop {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.menu-desktop li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.menu-mobile-list li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sign {
+  display: flex;
+  gap: 10px;
+}
+
+.sign button,
+.sign-mobile button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.wrapper-cart {
+  background-color: #553b33;
+  padding: 12px;
+}
+
+.menu-toggle {
+  display: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.mobile-desktop {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: white;
+  position: absolute;
+  top: 140px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.mobile-desktop .mobile-desktop-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.mobile-desktop .menu-mobile-list li {
+  text-decoration: none;
+  color: black;
+  list-style: none;
+  font-size: 18px;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+  .wrapper-header {
+    height: 64px;
+  }
+
+  header {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+
+  .sign {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-desktop.active {
+    display: flex;
+    top: 50px;
+    position: absolute;
+    text-align: right;
+  }
+}

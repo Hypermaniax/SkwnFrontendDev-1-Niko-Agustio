@@ -1,0 +1,47 @@
+.partner-brand {
+  background: #fcfafa;
+}
+
+.partner-brand .wrapper-brand {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  padding: 50px 0;
+}
+
+.partner-brand .wrapper-brand span {
+  font-size: 96px;
+  font-weight: 800;
+}
+.partner-brand .wrapper-brand p {
+  font-size: 24px;
+  font-weight: 400;
+}
+#right {
+  display: flex;
+  gap: 100px;
+}
+
+@media (max-width: 480px) {
+  .partner-brand .wrapper-brand {
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .partner-brand .wrapper-brand span {
+    font-size: 24px;
+    font-weight: 800;
+  }
+  .partner-brand .wrapper-brand p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .partner-brand .wrapper-brand #right .icon-img {
+    width: 60px;
+  }
+  #right {
+    gap: 10px;
+  }
+}
